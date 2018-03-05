@@ -129,13 +129,13 @@ void parse_file ( char * filename,
       matrix_mult(transform, edges);
     }
     else if (!strcmp(line, "display")) {
+      clear_screen(s);
       color c;
       c.red = 255;
       c.blue = 0;
       c.green = 0;
       draw_lines(edges, s, c);
       display(s);
-      clear_screen(s);
     }
     else if (!strcmp(line, "save")) {
       fgets(line, 255, f);
